@@ -1,0 +1,30 @@
+---
+title: "Document to reproduce results in a R Markdown file"
+author: "Author name"
+date: "10/22/2021"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Introduction 
+
+Add here.
+
+# Methods 
+
+Add here.
+
+# Results 
+
+Add here.
+
+# Summary 
+
+
+```{r}
+sessionInfo()
+```
+

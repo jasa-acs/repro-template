@@ -18,7 +18,7 @@ output: html_document
 
 # Alternatives - how should our conception of compendiums change?
 
-1. Actions
+1. (Github) Actions
 
 # A manuscipt is a static document, is the problem that a compendium is not?
 

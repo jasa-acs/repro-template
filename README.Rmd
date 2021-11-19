@@ -54,7 +54,6 @@ JASA Associate Editors of Reproducible will review the materials in the personal
 Once the manuscript is accepted, the materials in the author(s) personal GitHub repository will be copied to the [JASA repository](https://github.com/jasa-acs). 
 
 
-
 ## Description of template structure using R 
 
 Two preferred file structures for submissions are shown below. 
@@ -97,7 +96,7 @@ ld_cc_dendro(`project directory`)
 ## Reproducible document
 
 The second is for manuscripts written as
-R Markdown documents.
+R Markdown documents (this repository).
 
 ```{r echo = FALSE}
 `project directory` <- list(
@@ -108,3 +107,13 @@ R Markdown documents.
 )
 ld_cc_dendro(`project directory`)
 ```
+
+## References
+
+Gentleman, Robert, and Duncan Temple Lang. "[Statistical Analyses and Reproducible Research](http://biostats.bepress.com/cgi/viewcontent.cgi?article=1001&context=bioconductor)." (2004).
+
+Gentleman, Robert. "[Reproducible research: a bioinformatics case study](https://www.degruyter.com/document/doi/10.2202/1544-6115.1034/html)." Statistical applications in genetics and molecular biology 4.1 (2005).
+
+Marwick, Ben, and Bryan, Jennifer, and Attali, Dean, and Hollister, Jeffrey W. [rrrpkg Github Page](https://github.com/ropensci/rrrpkg).
+
+

@@ -94,7 +94,8 @@ provided and are separate from the manuscript.
 
 ## Reproducible document
 
-The second is for manuscripts written as R Markdown documents.
+The second is for manuscripts written as R Markdown documents (this
+repository).
 
     ## 
     ## project directory
@@ -106,3 +107,17 @@ The second is for manuscripts written as R Markdown documents.
     ##   |  o-- object of type(s):dir
     ##   o-- data/
     ##      o-- object of type(s):dir
+
+## References
+
+Gentleman, Robert, and Duncan Temple Lang. “[Statistical Analyses and
+Reproducible
+Research](http://biostats.bepress.com/cgi/viewcontent.cgi?article=1001&context=bioconductor).”
+(2004).
+
+Gentleman, Robert. “[Reproducible research: a bioinformatics case
+study](https://www.degruyter.com/document/doi/10.2202/1544-6115.1034/html).”
+Statistical applications in genetics and molecular biology 4.1 (2005).
+
+Marwick, Ben, and Bryan, Jennifer, and Attali, Dean, and Hollister,
+Jeffrey W. [rrrpkg Github Page](https://github.com/ropensci/rrrpkg).

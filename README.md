@@ -154,7 +154,7 @@ suggested.
 1.  Provide documentation indicating the language environment and the
     version was used to produce outputs.
 2.  Use a single package environment for all reproducible content.
-3.  Prefer packages from package repositories (CRAN, Bioconductor,
+3.  Prefer packages from package archives (CRAN, Bioconductor,
     RForge.net for example).
 4.  If you use packages from a code repository (Github, Gitlab, etc.)
     then use a release version. If none is available fork the repository

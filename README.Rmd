@@ -117,6 +117,44 @@ R Markdown documents (this repository).
 ld_cc_dendro(`project directory`)
 ```
 
+## Guidance on the use of reproducible environments
+
+Submissions may include the use of reproducible environments capturing
+state of a machine generating manuscript artifacts and even the manuscript
+itself. Here we discuss two types of reproducible environments and their use.
+
+### Package environments
+
+Package environments capture the set of packages used by a programming language
+needed to generate output. The R programming language has `renv`, 
+`switchr` and others to accomplish this, Python has `venv`, `conda` and others, 
+and Julia has native support (through the `Pkg` package). When submitting 
+these types of environments, the following are suggested.
+
+1. Provide documentation indicating the language environment and the version
+was used to produce outputs.
+2. Use a single package environment for all reproducible content.
+3. Prefer packages from package repositories (CRAN, Bioconductor, RForge.net for 
+example).
+4. If you use packages from a code repository (Github, Gitlab, etc.) then
+use a release version. If none is available fork the repository and provide a 
+release.
+
+### Virtual environments
+
+Virtual capture like docker and singularity for example, capture the entire 
+computing environment in which computations were performed. In general, they
+are a more robust solution, capable of taking a "snapshot" of a machine including
+any system-level utilities and external libraries needed to perform you computation.
+They have the advantage that reproducing materials mean running the virtual
+environment, rather than recreating the programming language environment and
+may be preferred. When submitting these types of environments, the following are suggested.
+
+1. Provide a single saved image with shared folder referencing the reproducibility
+file structure described above.
+2. If a single saved image is not being submitted, be aware of the suggestions
+provided in the [Package environments] section above.
+
 ## References
 
 Gentleman, Robert, and Duncan Temple Lang. "[Statistical Analyses and Reproducible Research](http://biostats.bepress.com/cgi/viewcontent.cgi?article=1001&context=bioconductor)." (2004).

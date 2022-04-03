@@ -1,12 +1,12 @@
-JASA Sharing Reproducible Materials over Github
+JASA Sharing Reproducible Materials with Github
 ================
 
-This GitHub repository contains a template structure for author(s) who
+This GitHub repository contains a suggested template structure for author(s) who
 submit to JASA (either Applications and Case Studies or Theory and
 Methods) to include materials to reproduce analyses, visualizations, and
 tables.
 
-We provide this template as a default structure that we think could be
+We provide this template as a default structure that we (the JASA Associate Editors of Reproducibility) think could be
 useful for many projects, either as is or with modifications by authors.
 However, the template is intended to be helpful and is by no means
 required of authors. Authors should consult [our reproducibility
@@ -27,35 +27,42 @@ the following advantages for author(s):
     to build off the analyses. Also iterations and changes to the
     analysis are then available via the Git commit history.
 2.  Materials are easily available to other researchers.
-3.  Preparing a repository also makes it easy for the JASA associate
-    editors for reproducibility to copy the materials for a JASA article
-    into the JASA GitHub repository.
+3.  Preparing a repository also makes it easy for the JASA Associate
+    Editors for Reproducibility to copy the materials for a JASA article
+    into the JASA GitHub repository where the final paper products are stored
+    after publication (https://github.com/jasa-acs).
 4.  Others?
 
 ## How does the process work?
 
 ### Step 1
 
-Author(s) create a public GitHub repository by
+Author(s) can create a public GitHub repository in their own GitHub account
+by using this template repository on our GitHub page at 
+https://github.com/jasa-acs/repro-template-dev. This template contains a basic 
+skeletal structure to help authors structure their code and analyses for their 
+JASA publication. Creating a repository with the template can be done in the following
+way: 
 
-1.  Forking this template repository
-2.  Using `git clone` and removing the `.git` file
-3.  (need to add steps to init a new repository and push to
-    github/gitlab/etc.)
+Click on the "Use this template" button at https://github.com/jasa-acs/repro-template-dev.
 
-Alternatively, author(s) can manually create their own repository with
-the structure of this repository (possibly with modifications).
+![Click template button](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
+
+From there author(s) can [follow these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). However do not optionally select "**Include all branches**" as you do not need this for your own projects. 
+
 
 ### Step 2
 
-Author(s) edit (or replace) the manuscript template file and add their
-data, code, and other files.
+From there, the author(s) can directly edit (or replace) the manuscript template files in their own GitHub repository. 
+Author(s) can also add their own data, code, and other files as needed. 
+
+For guidance on getting started with git, we recommend the [Happy with git r](https://happygitwithr.com) tutorials.
 
 **Importantly, the authors should provide an overview of how to carry
 out the analyses presented in their manuscript in the README.md of their
 repository, replacing the content in this file.** This overview would
 generally refer to scripts/code files that execute the analyses and are
-placed either in the main directory or the `code` subdirectory. The
+placed either in the main directory or the `/code` subdirectory. The
 *Workflow* section of the ACC form should refer to this README.md as
 containing the instructions for how to reproduce the analyses.
 
@@ -82,6 +89,7 @@ and pushing their changes to their personal GitHub repository.
 **Should reviewers/editors be allow to provide pull requests?**
 
 *My initial two cents is that we hold off on PRs // CJP*
+*SCH // I agree with this and agree we hold off until we can get approval from JASA on this change as we do not normally identify ourselves. but personally, I have no problem with this idea and I think it would be great! *
 
 ### Step 6
 

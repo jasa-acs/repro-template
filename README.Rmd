@@ -62,20 +62,31 @@ JASA Associate Editors for Reproducibility will review the materials in the pers
 
 Once the manuscript is accepted, the materials in the author(s) personal GitHub repository will be copied to the [JASA repository](https://github.com/jasa-acs). 
 
+## Reproduciblity materials file structure
 
-## Description of template structure using R 
+The following describes a general reproducibility structure for submission. Users
+interested using RMarkdown/Quarto are encouraged to review the "JASA R Template"
+document in this repository.
 
-Two preferred file structures for submissions are shown below. 
-The goals in prescribing this structure are to make
-it easier for the reproducibility reviewer to confirm the materials are
-sufficient for reproducing the results as well as facilitating automated
-generation of the outputs via Docker, Singularity, or Github Actions.
+A submission will be a directory which may hold each of the following elements. Directories in the submission may have subdirectories to further organize
+the submission. 
 
-## Reproduciblity materials only
-
-The first is for the case where reproducibility materials are being provided and are
-separate from the manuscript. 
-
+1. A `README.md` file - This file gives a short description of the paper, the
+contents of each of the directories and instructions for reproducing relevant
+material.
+2. A `manuscript` directory - This directory will hold LaTeX code, .cls files, .bib
+files and other materials directly related to the generation of the manuscript.
+3. A `data` directory - This directory will hold raw data to be processed, 
+summarized, analyzes, and visualized.
+4. A `code` directory - This directory will hold all code, which may be used
+in conjunction with elements from the `data` or `artifacts` directory to produce
+summaries, analyses, and visualizations. This directory may include subdirectories
+referencing specific tasks related to the reproduction of the analyses including,
+but not limited to preprocessing, visualizing, analyzing, etc.
+5. An `artifacts` directory - This directory will hold objects derived from
+computations, possibly in conjuntions with elements from the `data` or `artifacts`
+directory. Visualizations used in a manuscript should be written to the
+`manuscript` directory.
 
 ```{r echo = FALSE}
 library(listdown)
@@ -90,38 +101,22 @@ dir_type <- function() {
   a
 }
 
-`project directory` <- list(
-  ".here" = file_type(),
+`Project directory` <- list(
   "README.md" = file_type(),
-  "renv/" = dir_type(),
   "manuscript/" = dir_type(),
   "data/" = dir_type(),
   "code/" = dir_type(),
-  "output/" = dir_type()
+  "artifacts/" = dir_type()
 )
-ld_cc_dendro(`project directory`)
-```
-
-## Reproducible document
-
-The second is for manuscripts written as
-R Markdown documents (this repository).
-
-```{r echo = FALSE}
-`project directory` <- list(
-  "manuscript.rmd" = file_type(),
-  "renv/" = dir_type(),
-  "preprocessing/" = dir_type(),
-  "data/" = dir_type()
-)
-ld_cc_dendro(`project directory`)
+ld_cc_dendro(`Project directory`)
 ```
 
 ## Guidance on the use of reproducible environments
 
 Submissions may include the use of reproducible environments capturing
 state of a machine generating manuscript artifacts and even the manuscript
-itself. Here we discuss two types of reproducible environments and their use.
+itself. Here we discuss two types of reproducible environments and their use. 
+Both virtual and package environments may be put in the `code` directory.
 
 ### Package environments
 
@@ -142,7 +137,7 @@ release.
 
 ### Virtual environments
 
-Virtual capture like docker and singularity for example, capture the entire 
+Virtual environments like docker and singularity for example, capture the entire 
 computing environment in which computations were performed. In general, they
 are a more robust solution, capable of taking a "snapshot" of a machine including
 any system-level utilities and external libraries needed to perform you computation.
@@ -151,9 +146,11 @@ environment, rather than recreating the programming language environment and
 may be preferred. When submitting these types of environments, the following are suggested.
 
 1. Provide a single saved image with shared folder referencing the reproducibility
-file structure described above.
-2. If a single saved image is not being submitted, be aware of the suggestions
-provided in the [Package environments] section above.
+file structure described above. Virtual environments may be 
+2. If a single saved image is not being submitted, consider package environments
+including `renv` or `switchr` for R code; `venv` or `conda` for Python; and
+Julia native package environments. 
+
 
 ## References
 

@@ -1,12 +1,12 @@
-JASA Sharing Reproducible Materials over Github
+JASA Reproducibility Materials Template
 ================
 
-This GitHub repository contains a template structure for author(s) who
+This GitHub repository contains a suggested template structure for authors who
 submit to JASA (either Applications and Case Studies or Theory and
 Methods) to include materials to reproduce analyses, visualizations, and
 tables.
 
-We provide this template as a default structure that we think could be
+We provide this template as a default structure that we (the JASA Associate Editors of Reproducibility) think could be
 useful for many projects, either as is or with modifications by authors.
 However, the template is intended to be helpful and is by no means
 required of authors. Authors should consult [our reproducibility
@@ -14,7 +14,7 @@ guide](https://jasa-acs.github.io/repro-guide) for details on what is
 required of reproducibility materials submitted with JASA revisions (not
 required upon initial submission).
 
-## Why is template repository this useful?
+## Why is a template repository useful?
 
 The purpose of this template repository is to provide a mechanism for
 author(s) to share their materials via a Git repository, hosted on a
@@ -27,35 +27,38 @@ the following advantages for author(s):
     to build off the analyses. Also iterations and changes to the
     analysis are then available via the Git commit history.
 2.  Materials are easily available to other researchers.
-3.  Preparing a repository also makes it easy for the JASA associate
-    editors for reproducibility to copy the materials for a JASA article
-    into the JASA GitHub repository.
-4.  Others?
+3.  Preparing a repository also makes it easy for the JASA Associate
+    Editors for Reproducibility to copy the materials for a JASA article
+    into the JASA GitHub repository where the final paper products are stored
+    after publication (https://github.com/jasa-acs).
 
 ## How does the process work?
 
 ### Step 1
 
-Author(s) create a public GitHub repository by
+Author(s) can create a public GitHub repository in their own GitHub account
+by using this template repository. This template contains a basic 
+skeletal structure to help authors structure their code and analyses for their 
+JASA publication. Creating a repository with the template can be done in the following way: 
 
-1.  Forking this template repository
-2.  Using `git clone` and removing the `.git` file
-3.  (need to add steps to init a new repository and push to
-    github/gitlab/etc.)
+Click on the "Use this template" button for [this GitHub template repository](https://github.com/jasa-acs/repro-template-dev).
 
-Alternatively, author(s) can manually create their own repository with
-the structure of this repository (possibly with modifications).
+![Click template button](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
+
+From there, author(s) can [follow these instructions](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-repository-from-a-template). However do not optionally select "**Include all branches**" as you do not need this for your own projects. 
+
 
 ### Step 2
 
-Author(s) edit (or replace) the manuscript template file and add their
-data, code, and other files.
+The author(s) can then directly edit (or replace) the manuscript template files in their own GitHub repository. Author(s) can also add their own data, code, and other files as needed. 
+
+For guidance on getting started with git, we recommend the [Happy with git r](https://happygitwithr.com) tutorials.
 
 **Importantly, the authors should provide an overview of how to carry
-out the analyses presented in their manuscript in the README.md of their
+out the analyses presented in their manuscript in the `README.md` of their
 repository, replacing the content in this file.** This overview would
 generally refer to scripts/code files that execute the analyses and are
-placed either in the main directory or the `code` subdirectory. The
+placed either in the main directory or the `/code` subdirectory. The
 *Workflow* section of the ACC form should refer to this README.md as
 containing the instructions for how to reproduce the analyses.
 
@@ -68,70 +71,44 @@ account.
 ### Step 4
 
 Author(s) submit a link to their GitHub repository as part of the [JASA
-Reproducibility review
-process](https://jasa-acs.github.io/repro-guide/).
+Reproducibility review process](https://jasa-acs.github.io/repro-guide/),
+required upon submission of an invited revision.
 
 ### Step 5
 
 JASA Associate Editors for Reproducibility will review the materials in
-the personal GitHub repository of the authors and submit a
+the GitHub repository of the authors and submit a
 reproducibility review as part of the standard JASA review process.
 Authors have the opportunity to respond to the review by making changes
 and pushing their changes to their personal GitHub repository.
 
-**Should reviewers/editors be allow to provide pull requests?**
-
-*My initial two cents is that we hold off on PRs // CJP*
-
 ### Step 6
 
 Once the manuscript is accepted, the materials in the author(s) personal
-GitHub repository will be copied to the [JASA
-repository](https://github.com/jasa-acs).
+GitHub repository will be copied to the [JASA repository](https://github.com/jasa-acs).
 
-## Reproduciblity materials file structure
+## Reproducibility materials file structure
 
-The following describes a general reproducibility structure for
-submission. Users interested using RMarkdown/Quarto are encouraged to
+This template provides a suggested file structure for a JASA submission.
+
+Users interested in using RMarkdown/Quarto are encouraged to
 review the “JASA R Template” document in this repository.
 
-A submission will be a directory which may hold each of the following
-elements. Directories in the submission may have subdirectories to
+The suggest components are as follows. Directories in the submission may have subdirectories to
 further organize the submission.
 
 1.  A `README.md` file - This file gives a short description of the
-    paper, the contents of each of the directories and instructions for
-    reproducing relevant material.
-2.  A `manuscript` directory - This directory will hold LaTeX code, .cls
-    files, .bib files and other materials directly related to the
+    paper and an overview of how to carry out the analyses presented in their manuscript.
+2.  A `manuscript` directory - This directory will generally hold the source files
+    (often LaTeX or Rmd) for the manuscript and any files directly related to the
     generation of the manuscript.
-3.  A `data` directory - This directory will hold raw data to be
-    processed, summarized, analyzes, and visualized.
-4.  A `code` directory - This directory will hold all code, which may be
-    used in conjunction with elements from the `data` or `artifacts`
-    directory to produce summaries, analyses, and visualizations. This
-    directory may include subdirectories referencing specific tasks
-    related to the reproduction of the analyses including, but not
-    limited to preprocessing, visualizing, analyzing, etc.
-5.  An `artifacts` directory - This directory will hold objects derived
-    from computations, possibly in conjuntions with elements from the
-    `data` or `artifacts` directory. Visualizations used in a manuscript
-    should be written to the `manuscript` directory.
-
-<!-- -->
-
-    ## 
-    ## Project directory
-    ##   |-- README.md
-    ##   |  o-- object of type(s):file
-    ##   |-- manuscript/
-    ##   |  o-- object of type(s):dir
-    ##   |-- data/
-    ##   |  o-- object of type(s):dir
-    ##   |-- code/
-    ##   |  o-- object of type(s):dir
-    ##   o-- artifacts/
-    ##      o-- object of type(s):dir
+3.  A `data` directory - This directory will generally hold the real data files 
+    (or facsimile versions of them in place of confidential data) and simulated data files.
+    See `data/README.md` for more details. 
+4.  A `code` directory - This directory will generally hold 
+    source code files that contain the core code to implement the method and various utility/auxiliary functions.
+5.  An `output` directory - This directory will generally hold objects derived
+    from computations, including results of simulations or real data analyses. See `output/README.md` for more details.
 
 ## Guidance on the use of reproducible environments
 
@@ -151,22 +128,22 @@ package). When submitting these types of environments, the following are
 suggested.
 
 1.  Provide documentation indicating the language environment and the
-    version was used to produce outputs.
+    version used to produce outputs.
 2.  Use a single package environment for all reproducible content.
 3.  Prefer packages from package archives (CRAN, Bioconductor,
     RForge.net for example).
-4.  If you use packages from a code repository (Github, Gitlab, etc.)
-    then use a release version. If none is available fork the repository
+4.  If you use packages from a code repository (GitHub, GitLab, etc.)
+    then use a release version. If none is available, fork the repository
     and provide a release.
 
 ### Virtual environments
 
-Virtual environments like docker and singularity for example, capture
+Virtual environments such as Docker and Singlarity capture
 the entire computing environment in which computations were performed.
 In general, they are a more robust solution, capable of taking a
-“snapshot” of a machine including any system-level utilities and
-external libraries needed to perform you computation. They have the
-advantage that reproducing materials mean running the virtual
+“snapshot” of a machine, including any system-level utilities and
+external libraries needed to perform your computations. They have the
+advantage that reproducing materials means running the virtual
 environment, rather than recreating the programming language environment
 and may be preferred. When submitting these types of environments, the
 following are suggested.

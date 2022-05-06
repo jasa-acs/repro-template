@@ -149,8 +149,7 @@ and may be preferred. When submitting these types of environments, the
 following are suggested.
 
 1.  Provide a single saved image with shared folder referencing the
-    reproducibility file structure described above. Virtual environments
-    may be
+    reproducibility file structure described above. 
 2.  If a single saved image is not being submitted, consider package
     environments including `renv` or `switchr` for R code; `venv` or
     `conda` for Python; and Julia native package environments.

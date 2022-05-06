@@ -91,9 +91,6 @@ GitHub repository will be copied to the [JASA repository](https://github.com/jas
 
 This template provides a suggested file structure for a JASA submission.
 
-Users interested in using RMarkdown/Quarto are encouraged to
-review the “JASA R Template” document in this repository.
-
 The suggest components are as follows. Directories in the submission may have subdirectories to
 further organize the submission.
 

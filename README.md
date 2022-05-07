@@ -41,7 +41,7 @@ by using this template repository. This template contains a basic
 skeletal structure to help authors structure their code and analyses for their 
 JASA publication. Creating a repository with the template can be done in the following way: 
 
-Click on the "Use this template" button for [this GitHub template repository](https://github.com/jasa-acs/repro-template-dev).
+Click on the "Use this template" button for [this GitHub template repository](https://github.com/jasa-acs/repro-template).
 
 ![Click template button](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
 
@@ -89,16 +89,17 @@ GitHub repository will be copied to the [JASA repository](https://github.com/jas
 
 ## Reproducibility materials file structure
 
-This template provides a suggested file structure for a JASA submission.
+This template provides a suggested file structure for a JASA submission, but authors are free
+to modify this structure.
 
-The suggest components are as follows. Directories in the submission may have subdirectories to
-further organize the submission.
+The suggested components are as follows. Directories in the submission may have subdirectories to
+further organize the materials.
 
 1.  A `README.md` file - This file gives a short description of the
     paper and an overview of how to carry out the analyses presented in their manuscript.
 2.  A `manuscript` directory - This directory will generally hold the source files
     (often LaTeX or Rmd) for the manuscript and any files directly related to the
-    generation of the manuscript.
+    generation of the manuscript, including figure files.
 3.  A `data` directory - This directory will generally hold the real data files 
     (or facsimile versions of them in place of confidential data) and simulated data files.
     See `data/README.md` for more details. 
@@ -124,14 +125,14 @@ language needed to generate output. The R programming language has
 package). When submitting these types of environments, the following are
 suggested.
 
-1.  Provide documentation indicating the language environment and the
-    version used to produce outputs.
+1.  Clearly indicate (in the overall `README.md`) the language(s) used (including version) 
+    and the package environment tool used (e.g., `renv`, `conda`).
 2.  Use a single package environment for all reproducible content.
 3.  Prefer packages from package archives (CRAN, Bioconductor,
     RForge.net for example).
 4.  If you use packages from a code repository (GitHub, GitLab, etc.)
-    then use a release version. If none is available, fork the repository
-    and provide a release.
+    then use a release version if possible, or indicate the commit used. You could also consider
+    forking the repository and providing a release.
 
 ### Virtual environments
 
@@ -141,15 +142,10 @@ In general, they are a more robust solution, capable of taking a
 “snapshot” of a machine, including any system-level utilities and
 external libraries needed to perform your computations. They have the
 advantage that reproducing materials means running the virtual
-environment, rather than recreating the programming language environment
-and may be preferred. When submitting these types of environments, the
-following are suggested.
-
-1.  Provide a single saved image with shared folder referencing the
-    reproducibility file structure described above. 
-2.  If a single saved image is not being submitted, consider package
-    environments including `renv` or `switchr` for R code; `venv` or
-    `conda` for Python; and Julia native package environments.
+environment, rather than recreating the programming language environment.
+If using a virtual environment, we ask that 
+you provide a definition file (e.g., a Dockerfile) or (perhaps better)
+a link to an image in a standard online registry, such as DockerHub.
 
 ## References
 

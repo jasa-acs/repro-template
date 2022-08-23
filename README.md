@@ -41,7 +41,7 @@ by using this template repository. This template contains a basic
 skeletal structure to help authors structure their code and analyses for their 
 JASA publication. Creating a repository with the template can be done in the following way: 
 
-Click on the "Use this template" button for [this GitHub template repository](https://github.com/jasa-acs/repro-template).
+Click on the "Use this template" button for [this GitHub template repository](https://github.com/jasa-acs/repro-template). (You'll need to be signed in to a GitHub account in order to see the button.)
 
 ![Click template button](https://docs.github.com/assets/cb-36544/images/help/repository/use-this-template-button.png)
 

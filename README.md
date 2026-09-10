@@ -27,10 +27,7 @@ the following advantages for author(s):
     to build off the analyses. Also iterations and changes to the
     analysis are then available via the Git commit history.
 2.  Materials are easily available to other researchers.
-3.  Preparing a repository also makes it easy for the JASA Associate
-    Editors for Reproducibility to copy the materials for a JASA article
-    into the JASA GitHub repository where the final paper products are stored
-    after publication (https://github.com/jasa-acs).
+
 
 ## How does the process work?
 
@@ -74,6 +71,10 @@ Author(s) submit a link to their GitHub repository as part of the [JASA
 Reproducibility review process](https://jasa-acs.github.io/repro-guide/),
 required upon submission of an invited revision.
 
+Note that since GitHub repositories can be deleted or made private at any time,
+they are not suitable as permanent storage for materials. 
+To ensure long-term availability, author(s) should also include  materials in the submission's supplementary material or place them in a permanent archive with a DOI, such as in Zenodo.
+
 ### Step 5
 
 JASA Associate Editors for Reproducibility will review the materials in
@@ -81,11 +82,6 @@ the GitHub repository of the authors and submit a
 reproducibility review as part of the standard JASA review process.
 Authors have the opportunity to respond to the review by making changes
 and pushing their changes to their personal GitHub repository.
-
-### Step 6
-
-Once the manuscript is accepted, the materials in the author(s) personal
-GitHub repository will be copied to the [JASA repository](https://github.com/jasa-acs).
 
 ## Reproducibility materials file structure
 
